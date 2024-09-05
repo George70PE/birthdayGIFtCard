@@ -1,0 +1,147 @@
+/* Challenge 13: Change the site's background into a gradient that goes from blue at the top to pink at the bottom. */
+
+/* Challenge 01: Style the app according to the provided design (Pic1.jpg). The font is called "Happy Monkey" and can be embedded via Google Fonts.
+Don't know how to make an image round? Google it! Also, consider how you should select the image (class vs id vs element selector). */
+
+body {
+    /* background: #a2d2ff;                                    /* Solution 02 */
+    background: linear-gradient(#a2d2ff, #EFB0c9);        /* Solution 13 */
+    color: #ffffff;             /* Solution 02 */
+    font-family: "Happy Monkey", system-ui;
+    text-align: center;
+}
+
+#picture {
+    width: 150px;
+    border: 6px solid #EFB0c9;      /* Solution 02 */
+    border-radius: 50%;
+}
+
+/* Challenge 02: Add colors to the site based on the provided design (Pic2.jpg).
+    pink: #EFB0C9
+    blue: #a2d2ff
+    white: #ffffff */
+
+/* Challenge 03: Add a thin blurred border around the <h1>, <h2>, and <h4> using the text-shadow technique you learned in the Space Exploration section. Set
+the blur to 1px and the color to black. */
+
+.blurredBorder {                              /* Solution 03: added the class to h1, h2 and h4 in the html */
+    text-shadow: 0px 0px 1px black;         /* A 2nd solution: h1, h2, h3 { text-shadow: 0px 0px 1px black; } No need to add anything to the html */
+}
+
+/* Challenge 04: First, wrap the HTML elements in a <div> with an id called "header". Add a pink background to h2 and h4. 
+Then, select the "header" and use flexbox to achieve the layout you've been provided in the design slide. All according to Pic3.jpg */
+
+
+/* Challenge 05: Make the bday elements look like the provided design slide. Pic4.jpg */
+
+#bday-age {
+    background: #EFB0c9;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+#bday-date {
+    margin: 0;
+    background: #EFB0c9;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Challenge 06:
+a. Create a "gift-section" <div> that will wrap all the elements for the first gift.
+b. Add the <h2>, <h3>, and <img> elements, and give all of them their own classes.
+c. Style the elements according to the design. Pic5.jpg
+PS: the image should be 400px wide. */
+
+.giftSection {
+    margin: 50px;
+}
+
+.h2_giftSection {
+    margin-bottom: 10px;
+}
+
+.h3_giftSection {
+    margin-top: 0;
+}
+
+.img_giftSection {
+    background-image: url("images/gift-cover.jpg");         /* Solution 07 */
+    background-size: cover;                                 /* Solution 07 */
+    width: 400px;       
+    height: 400px;                                          /* Solution 07 */
+    border: 6px solid white;
+    border-radius: 10px;
+    margin: 0 auto;                                         /* Solution 07 */
+}
+
+/* Challenge 07: "Fix" the "img_giftSection" <div> so that it looks like the provided design again. Pic5.jpg (Changed img to div)
+It needs a height (should be a square), a background image, and to be centered again. */
+
+/* Challenge 08: Swap the gift paper image out with the happy.gif when you hover over it! */
+
+#happyGif:hover {
+    background-image: url("images/happy.webp");
+}
+
+/* Challenge 09: Create the next GIFt (hot.gif). Its HTML structure should be like the previous one, but without the "gift-hint" element.
+However, now that you have multiple GIFts on the page, you cannot use the "gift-img" class to set the GIF background-image(s) on :hover. Each GIFt will need a 
+unique id that controls which background image that should be shown when hovering over the element. Design Pic6.jpg */
+
+#hotGif:hover {
+    background-image: url("images/hot.webp");
+}
+
+/* Challenge 10: Create the "genius" and "badass" GIFt sections.
+Texts:
+If I had to describe you with ONE word 👇
+The only person as badass as you 💪 */
+
+#geniusGif:hover {
+    background-image: url("images/genius.webp");
+}
+
+#badassGif:hover {
+    background-image: url("images/badass.webp");
+}
+
+/* Challenge 11: Create the "cheers" GIFt section.
+Note: this GIFt should have a height of 200px. Select the #cheers id and override the height that the element got from the .img_giftSection class.
+Text: 
+This one's for you, my friend 🥂 */
+
+#cheersGif {
+    height: 200px;
+}
+
+#cheersGif:hover {
+    background-image: url("images/cheers.webp");
+}
+
+/* Challenge 12: Add the footer paragraph according to the design. (Pic7.jpg) Configure the anchor tag to open the link in a new tab.
+Forgotten how to do it? Google it! 
+Link: 
+https://scrimba.com/learn/htmlandcss
+Text:
+Want to create your own Birthday GIFt site? Take this HTML & CSS course. */
+
+#footer {
+    text-shadow: 0px 0px 1px black;
+    font-style: italic;
+    width: 400px;
+    margin: 20px auto;
+}
+
+a {
+    color: white;
+}
+
+    
